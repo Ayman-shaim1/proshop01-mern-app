@@ -35,7 +35,7 @@ app.get("/api/config/paypal", (req, res) => {
 if (process.env.NODE_ENV === "production") {
   const staticFolder = express.static(path.resolve(__dirname,"/frontend/build"));
   app.use(staticFolder);
-  const buildFolder = "/frontend/build";
+  const buildFolder = path.join(__dirname,"frontend","build");
   app.get("*", (req, res) => {
     if (fs.existsSync(buildFolder)) {
       const indexFile = path.resolve(__dirname, "frontend", "build", "index.html");
