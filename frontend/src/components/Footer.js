@@ -1,0 +1,19 @@
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+
+function Footer() {
+  return (
+    <footer>
+      <Container>
+        <Row>
+          <Col className="text-center py-3">
+            <span>Copyright &copy; ProShop</span>
+          </Col>
+        </Row>
+      </Container>
+    </footer>
+  );
+}
+
+export default Footer;
+        
