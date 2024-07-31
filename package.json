@@ -9,7 +9,6 @@
     "npm":"7.7.5"
   },
   "scripts": {
-    "build":"cd frontend && npm build",
     "start": "node backend/server",
     "server": "nodemon backend/server",
     "client": "cd frontend && npm start",
