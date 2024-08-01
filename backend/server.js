@@ -11,8 +11,16 @@ import orderRoutes from "./routes/orderRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import { notFound, errorHandler } from "./middlewares/errorMiddleware.js";
 import fs from "fs";
+import cors from "cors";
 
 const app = express();
+app.use(
+  cors({
+    origin: ["https://proshop01-mern-app.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 dotenv.config();
 connectDB();
 app.use(express.json());
